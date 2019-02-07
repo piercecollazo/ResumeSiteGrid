@@ -7,24 +7,31 @@ body{
 /* portrait phone layout */
 @media screen and (max-width:500px){
     
+    body{
+        height:50vh;
+        width:50vw;
+        background-color: white;
+    }
+
     #app{
         display: grid;
-        grid-template-columns: 500px;
-        grid-template-rows: 56px 35px 510px 20px;
+        grid-template-columns:500px;
+        grid-template-rows: 36px 35px 200px 20px;
     }
 
     /* header area */
     #title{
         background-color: rgb(166, 166, 255);
         grid-area:1/1/1/1;
-        width:100vw;
+        width:50vw;
+        font-size:10px;
     }
 
     #header{
         grid-area:2/1/2/1;
-        background-color: rgb(166, 166, 255);
-        width:100vw;
-        height:30px;
+        background-color: rgb(2, 80, 126);
+        width:50vw;
+        height:20px;
     }
 
     button{
@@ -44,8 +51,8 @@ body{
         grid-template-columns:auto;
         grid-template-rows:auto; */
         background-color: white;
-        width:100vh;
-        height:100vh;
+        width:50vw;
+        height:50vh;
     }
 
     .image{
@@ -59,7 +66,7 @@ body{
         background-color: rgba(0, 0, 0, 0.274);
         font-size:15px;
         width:200px;
-        bottom:60px;
+        bottom:57px;
     }
     
     .summary{
@@ -126,7 +133,7 @@ body{
         background-color: rgb(166, 166, 255);
         font-size: 10px;
         /* text-align: center; */
-        width:100vw;
+        width: 50vw;
         height:25px;
     }
 }
