@@ -116,7 +116,7 @@ body{
         display:flex;
         justify-content: center;
         position:relative;
-        bottom:29vh;
+        bottom:26.5vh;
     }
     .dot{
         border-radius: 50%;
@@ -271,7 +271,7 @@ body{
         display:flex;
         justify-content: center;
         position:relative;
-        bottom:50vh;
+        bottom:47.5vh;
     }
     .dot{
         border-radius: 50%;

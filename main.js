@@ -13,23 +13,24 @@ function showSlides() {
   slideIndex++;
 
   if (slideIndex > slides.length) {
-    slideIndex = 1
+    slideIndex = 1;
   }
 
-  if (slideIndex < 1) {
-    slideIndex = 1
-  }
-  
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace("active", "");
   }
-  slides[slideIndex-1].style.display = "block";  
+
+  if (dots > dots.length){
+      dots= 1;
+  }
+
   dots[slideIndex-1].className += "active";
+  slides[slideIndex-1].style.display = "block";  
   setTimeout(showSlides, 5000);
 }
-
+// slideshow controls
 function plusSlide(n){
-  showSlides(slideIndex += n);
+  showSlides(slideIndex + n);
 }
 
 function currentSlide(n){
