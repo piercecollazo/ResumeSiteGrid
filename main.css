@@ -15,7 +15,7 @@ body{
 
     #app{
         display: grid;
-        grid-template-columns:500px;
+        grid-template-columns:100px 200px;
         grid-template-rows: repeat(4, auto);
         width:100vw;
         height:100vh;
@@ -26,6 +26,7 @@ body{
         background-color: rgb(166, 166, 255);
         grid-area:1/1/1/1;
         width:100vw;
+        margin-bottom: -5vh;
         font-size:10px;
     }
 
@@ -33,7 +34,7 @@ body{
         grid-area:2/1/2/1;
         background-color: rgb(2, 80, 126);
         width:100vw;
-        height:20px;
+        height:5vh;
     }
 
     button{
@@ -48,18 +49,20 @@ body{
     }
     /* content area */
     #content{
-        grid-area:3/1/3/1;
+        grid-area:3/1/3/2;
         /* display:grid;
         grid-template-columns:auto;
         grid-template-rows:auto; */
         background-color: white;
         width:100vw;
-        height:100vh;
+        height:50vh;
+        justify-self: start;
+        
     }
 
     .image{
-        height:125px;
-        width:200px;
+        height:200px;
+        width:100vw;
     } 
 
     .imageTitle{
@@ -67,18 +70,18 @@ body{
         position: relative;
         background-color: rgba(0, 0, 0, 0.274);
         font-size:15px;
-        width:200px;
-        bottom:57px;
+        width:100vw;
+        bottom:12vh;
     }
     
     .summary{
         color: white;
         background-color:rgba(0, 0, 0, 0.274);
-        font-size: 10px;
-        position: absolute;
-        bottom: 30px;
-        /* text-align: center; */
-        width:200px;
+        font-size: 12px;
+        position: relative;
+        bottom: 14.5vh;
+        text-align: start;
+        width:100vw;
     }
     .fade{
         -webkit-animation-duration: 1.5s;
@@ -91,6 +94,7 @@ body{
     }
     /* slideshow controls */
     #next, #prev{
+        display:none;
         position: relative;
         bottom:500px;
         color:rgb(255, 255, 255);
@@ -112,7 +116,7 @@ body{
         display:flex;
         justify-content: center;
         position:absolute;
-        bottom:10px;
+        bottom:25vh;
     }
     .dot{
         border-radius: 50%;
@@ -129,9 +133,9 @@ body{
     }
     
     #homeText{
-        font-size: 8px;
+        font-size: 10px;
         position: relative;
-        top: 40px;
+        bottom:10vh;
     }
 
     /* footer area */
@@ -141,7 +145,8 @@ body{
         font-size: 10px;
         text-align: center;
         width: 100vw;
-        height:100vh;
+        height:5vh;
+        margin-top:10vh;
         align-self:end;
     }
 }
