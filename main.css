@@ -8,29 +8,31 @@ body{
 @media screen and (max-width:500px){
     
     body{
-        height:50vh;
-        width:50vw;
+        height:100vh;
+        width:100vw;
         background-color: white;
     }
 
     #app{
         display: grid;
         grid-template-columns:500px;
-        grid-template-rows: 36px 35px 200px 20px;
+        grid-template-rows: repeat(4, auto);
+        width:100vw;
+        height:100vh;
     }
 
     /* header area */
     #title{
         background-color: rgb(166, 166, 255);
         grid-area:1/1/1/1;
-        width:50vw;
+        width:100vw;
         font-size:10px;
     }
 
     #header{
         grid-area:2/1/2/1;
         background-color: rgb(2, 80, 126);
-        width:50vw;
+        width:100vw;
         height:20px;
     }
 
@@ -51,8 +53,150 @@ body{
         grid-template-columns:auto;
         grid-template-rows:auto; */
         background-color: white;
-        width:50vw;
-        height:50vh;
+        width:100vw;
+        height:100vh;
+    }
+
+    .image{
+        height:125px;
+        width:200px;
+    } 
+
+    .imageTitle{
+        color:white;
+        position: relative;
+        background-color: rgba(0, 0, 0, 0.274);
+        font-size:15px;
+        width:200px;
+        bottom:57px;
+    }
+    
+    .summary{
+        color: white;
+        background-color:rgba(0, 0, 0, 0.274);
+        font-size: 10px;
+        position: absolute;
+        bottom: 30px;
+        /* text-align: center; */
+        width:200px;
+    }
+    .fade{
+        -webkit-animation-duration: 1.5s;
+        animation:  fade;
+        animation-duration: 1.5s;
+    }
+    #slideshow{
+        position: relative;
+        margin:auto;
+    }
+    /* slideshow controls */
+    #next, #prev{
+        position: relative;
+        bottom:500px;
+        color:rgb(255, 255, 255);
+        font-size:30px;
+        font-weight:bold;
+        position:absolute;
+        top:50px;
+    }
+    
+    #next:hover, #prev:hover{
+        background-color:rgba(0, 0, 0, 0.247);
+    }
+    #next{
+        position: absolute;
+    
+        left:180px;
+    }
+    .navdots{
+        display:flex;
+        justify-content: center;
+        position:absolute;
+        bottom:10px;
+    }
+    .dot{
+        border-radius: 50%;
+        background-color: darkslategray;
+        margin: 0 2px;
+        padding:  2px 8px;
+    }
+    
+    .dotactive{
+        border-radius: 50%;
+        background-color: rgb(107, 179, 179);
+        margin: 0 2px;
+        padding:  8px 8px;
+    }
+    
+    #homeText{
+        font-size: 8px;
+        position: relative;
+        top: 40px;
+    }
+
+    /* footer area */
+    #footer{
+        grid-area:4/1/4/1;
+        background-color: rgb(166, 166, 255);
+        font-size: 10px;
+        text-align: center;
+        width: 100vw;
+        height:100vh;
+        align-self:end;
+    }
+}
+/*  */
+/* End of portait phone layout */
+/*  */
+
+/* Landscape phone layout */
+@media screen and (min-width:501px;) and  (max-width:550px){
+    body{
+        height:100vh;
+        width:100vw;
+        background-color: white;
+    }
+
+    #app{
+        display: grid;
+        grid-template-columns:500px;
+        grid-template-rows: repeat(4, auto);
+    }
+
+    /* header area */
+    #title{
+        background-color: rgb(166, 166, 255);
+        grid-area:1/1/1/1;
+        width:100vw;
+        font-size:10px;
+    }
+
+    #header{
+        grid-area:2/1/2/1;
+        background-color: rgb(2, 80, 126);
+        width:100vw;
+        height:20px;
+    }
+
+    button{
+        grid-area:2/1/2/1;
+        background-color: rgb(2, 80, 126);
+        padding: 5px px;
+        font-size: 10px;
+        display: inline-block;
+        text-align: center;
+        border-radius: 4px;
+        border-width: 0px;
+    }
+    /* content area */
+    #content{
+        grid-area:3/1/3/1;
+        /* display:grid;
+        grid-template-columns:auto;
+        grid-template-rows:auto; */
+        background-color: white;
+        width:100vw;
+        height:100vh;
     }
 
     .image{
@@ -78,6 +222,13 @@ body{
         /* text-align: center; */
         width:200px;
     }
+
+    #homeText{
+        font-size: 8px;
+        position: relative;
+        top: 40px;
+    }
+
     .fade{
         -webkit-animation-duration: 1.5s;
         animation:  fade;
@@ -132,8 +283,302 @@ body{
         grid-area:4/1/4/1;
         background-color: rgb(166, 166, 255);
         font-size: 10px;
+        text-align: center;
+        width: 100vw;
+        height:100vh;
+        align-self:end;
+    }
+}
+/* end of landscape phone layout */
+
+/*  */
+
+/* tablet layout */
+@media screen and (min-width:551px) and (max-width:800px){
+    
+    body{
+        height:100vh;
+        width:100vw;
+        background-color: white;
+    }
+
+    #app{
+        display: grid;
+        grid-template-columns:500px;
+        grid-template-rows: 1repeat(4, auto);
+        width:100vw;
+        height:100vh;
+    }
+
+    /* header area */
+    #title{
+        background-color: rgb(166, 166, 255);
+        grid-area:1/1/1/1;
+        width:100vw;
+        font-size:10px;
+    }
+
+    #header{
+        grid-area:2/1/2/1;
+        background-color: rgb(2, 80, 126);
+        width:100vw;
+        height:20px;
+    }
+
+    button{
+        grid-area:2/1/2/1;
+        background-color: rgb(2, 80, 126);
+        padding: 5px px;
+        font-size: 10px;
+        display: inline-block;
+        text-align: center;
+        border-radius: 4px;
+        border-width: 0px;
+    }
+    /* content area */
+    #content{
+        grid-area:3/1/3/1;
+        /* display:grid;
+        grid-template-columns:auto;
+        grid-template-rows:auto; */
+        background-color: white;
+        width:100vw;
+        height:100vh;
+    }
+
+    .image{
+        height:125px;
+        width:200px;
+    } 
+
+    .imageTitle{
+        color:white;
+        position: relative;
+        background-color: rgba(0, 0, 0, 0.274);
+        font-size:15px;
+        width:200px;
+        bottom:57px;
+    }
+    
+    .summary{
+        color: white;
+        background-color:rgba(0, 0, 0, 0.274);
+        font-size: 10px;
+        position: absolute;
+        bottom: 30px;
         /* text-align: center; */
-        width: 50vw;
-        height:25px;
+        width:200px;
+    }
+
+    #homeText{
+        font-size: 8px;
+        position: relative;
+        top: 40px;
+    }
+
+    .fade{
+        -webkit-animation-duration: 1.5s;
+        animation:  fade;
+        animation-duration: 1.5s;
+    }
+    #slideshow{
+        position: relative;
+        margin:auto;
+    }
+    /* slideshow controls */
+    #next, #prev{
+        position: relative;
+        bottom:500px;
+        color:rgb(255, 255, 255);
+        font-size:30px;
+        font-weight:bold;
+        position:absolute;
+        top:50px;
+    }
+    
+    #next:hover, #prev:hover{
+        background-color:rgba(0, 0, 0, 0.247);
+    }
+    #next{
+        position: absolute;
+    
+        left:180px;
+    }
+    .navdots{
+        display:flex;
+        justify-content: center;
+        position:absolute;
+        bottom:10px;
+    }
+    .dot{
+        border-radius: 50%;
+        background-color: darkslategray;
+        margin: 0 2px;
+        padding:  2px 8px;
+    }
+    
+    .dotactive{
+        border-radius: 50%;
+        background-color: rgb(107, 179, 179);
+        margin: 0 2px;
+        padding:  8px 8px;
+    }
+
+    /* footer area */
+    #footer{
+        grid-area:4/1/4/1;
+        background-color: rgb(166, 166, 255);
+        font-size: 10px;
+        text-align: center;
+        width: 100vw;
+        height:100vh;
+        align-self:end;
+    }
+}
+/* end of tablet layout */
+
+/*  */
+
+/* desktop layout */
+@media screen and (min-width:801px){
+    
+    body{
+        height:100vh;
+        width:100vw;
+        background-color: white;
+    }
+
+    #app{
+        display: grid;
+        grid-template-columns:500px;
+        grid-template-rows: repeat(4, auto);
+        width:100vw;
+        height:100vh;
+    }
+
+    /* header area */
+    #title{
+        background-color: rgb(166, 166, 255);
+        grid-area:1/1/1/1;
+        width:100vw;
+        font-size:10px;
+    }
+
+    #header{
+        grid-area:2/1/2/1;
+        background-color: rgb(2, 80, 126);
+        width:100vw;
+        height:20px;
+    }
+
+    button{
+        grid-area:2/1/2/1;
+        background-color: rgb(2, 80, 126);
+        padding: 5px px;
+        font-size: 10px;
+        display: inline-block;
+        text-align: center;
+        border-radius: 4px;
+        border-width: 0px;
+    }
+    /* content area */
+    #content{
+        grid-area:3/1/3/1;
+        /* display:grid;
+        grid-template-columns:auto;
+        grid-template-rows:auto; */
+        background-color: white;
+        width:100vw;
+        height:100vh;
+    }
+
+    .image{
+        height:125px;
+        width:200px;
+    } 
+
+    .imageTitle{
+        color:white;
+        position: relative;
+        background-color: rgba(0, 0, 0, 0.274);
+        font-size:15px;
+        width:200px;
+        bottom:57px;
+    }
+    
+    .summary{
+        color: white;
+        background-color:rgba(0, 0, 0, 0.274);
+        font-size: 10px;
+        position: absolute;
+        bottom: 30px;
+        /* text-align: center; */
+        width:200px;
+    }
+
+    #homeText{
+        font-size: 8px;
+        position: relative;
+        top: 40px;
+    }
+
+    .fade{
+        -webkit-animation-duration: 1.5s;
+        animation:  fade;
+        animation-duration: 1.5s;
+    }
+    #slideshow{
+        position: relative;
+        margin:auto;
+    }
+    /* slideshow controls */
+    #next, #prev{
+        position: relative;
+        bottom:500px;
+        color:rgb(255, 255, 255);
+        font-size:30px;
+        font-weight:bold;
+        position:absolute;
+        top:50px;
+    }
+    
+    #next:hover, #prev:hover{
+        background-color:rgba(0, 0, 0, 0.247);
+    }
+    #next{
+        position: absolute;
+    
+        left:180px;
+    }
+    .navdots{
+        display:flex;
+        justify-content: center;
+        position:absolute;
+        bottom:10px;
+    }
+    .dot{
+        border-radius: 50%;
+        background-color: darkslategray;
+        margin: 0 2px;
+        padding:  2px 8px;
+    }
+    
+    .dotactive{
+        border-radius: 50%;
+        background-color: rgb(107, 179, 179);
+        margin: 0 2px;
+        padding:  8px 8px;
+    }
+    
+
+    /* footer area */
+    #footer{
+        grid-area:4/1/4/1;
+        background-color: rgb(166, 166, 255);
+        font-size: 10px;
+        text-align: center;
+        width: 100vw;
+        height:100vh;
+        align-self:end;
     }
 }
